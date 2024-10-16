@@ -122,7 +122,7 @@ window.addEventListener('resize', () => {
     camera.updateProjectionMatrix()
     
     renderer.setSize(sizes.width, sizes.height)
-    renderer.setPixelRatio(Max(window.devicePixelRatio(), 2))
+    renderer.setPixelRatio(Math.max(window.devicePixelRatio, 2))
     renderer.render(scene, camera)
 })
 
@@ -196,7 +196,7 @@ const config = (initialConditions, color, line) => {
     const rho = 28;
     const beta = 8 / 3;
     const dt = 0.001;
-    const iterations = 30000;
+    const iterations = 3000;
     const lorentzPoints = lorentzAttractor(initialConditions, sigma, rho, beta, dt, iterations);
     createPoints(lorentzPoints, color, line)
 }

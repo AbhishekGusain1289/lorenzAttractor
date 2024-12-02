@@ -211,7 +211,7 @@ const createCurve = () => {
 }
 
 
-gui.add(options, 'range').min(1).max(30000).step(1).onChange(() => {createCurve()})
+// gui.add(options, 'range').min(1).max(30000).step(1).onChange(() => {createCurve()})
 
 
 window.addEventListener('dblclick', () => {
